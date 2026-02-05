@@ -31,7 +31,7 @@ Enfin le code du token tu met 2255`,
       [
         Markup.button.url(
           '📲 Ouvrir le bot',
-          'https://t.me/gamesripte_bot'
+          'https://t.me/gamesripte_bot/botscript'
         )
       ],
       [
