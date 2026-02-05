@@ -26,7 +26,7 @@ voici les 3 etatpe pour activer le scripte
 
 *en suite clic sur le bouton ouvrir le bot en bas tu met ton id de ton nouveau compte pour le synchroniser avec le bot  et le token tu met 2255`,
     Markup.inlineKeyboard([
-      [Markup.button.url('📲 Ouvrir le bot', 't.me/gamesripte_bot/botscript)],
+      [Markup.button.url('📲 Ouvrir le bot', 't.me/gamesripte_bot/botscript')],
       [Markup.button.url('🎥 Comment creer un compte Pro authentique', 'https://t.me/RAFAFSJUNIOR/5')]
     ])
   );
