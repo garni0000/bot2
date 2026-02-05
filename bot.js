@@ -23,9 +23,10 @@ bot.start(async (ctx) => {
 
 voici les 3 etatpe pour activer le scripte
 
-=Creer un compte pro Authentique avec le code promo FSRAFA uniquement sur Melbet ou 1xbet
+*Creer un compte pro Authentique avec le code promo FSRAFA uniquement sur Melbet ou 1xbet
 
-*en suite clic sur le bouton ouvrir le bot en bas tu met ton id de ton nouveau compte pour le synchroniser avec le bot`,
+*en suite clic sur le bouton ouvrir le bot en bas tu met ton id de ton nouveau compte pour le synchroniser avec le bot
+Enfin le code du token tu met 2255`,
     Markup.inlineKeyboard([
       [
         Markup.button.url(
