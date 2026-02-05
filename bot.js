@@ -1,21 +1,22 @@
+require('dotenv').config();
+
 const { Telegraf, Markup } = require('telegraf');
 const express = require('express');
 
-const bot = new Telegraf('2255');
+const bot = new Telegraf(process.env.BOT_TOKEN);
 
-/* ================= KEEP ALIVE ================= */
+/* ========= KEEP ALIVE ========= */
 const app = express();
 
 app.get('/', (req, res) => {
   res.send('Bot actif');
 });
 
-app.listen(3000, () => {
+app.listen(process.env.PORT || 3000, () => {
   console.log('Keep alive serveur lancé');
 });
-/* ============================================= */
+/* ============================== */
 
-// /start
 bot.start(async (ctx) => {
   await ctx.reply(
 `salut bienvenu au hack de rafa
@@ -24,10 +25,20 @@ voici les 3 etatpe pour activer le scripte
 
 =Creer un compte pro Authentique avec le code promo FSRAFA uniquement sur Melbet ou 1xbet
 
-*en suite clic sur le bouton ouvrir le bot en bas tu met ton id de ton nouveau compte pour le synchroniser avec le bot  et le token tu met 2255`,
+*en suite clic sur le bouton ouvrir le bot en bas tu met ton id de ton nouveau compte pour le synchroniser avec le bot`,
     Markup.inlineKeyboard([
-      [Markup.button.url('📲 Ouvrir le bot', 't.me/gamesripte_bot/botscript')],
-      [Markup.button.url('🎥 Comment creer un compte Pro authentique', 'https://t.me/RAFAFSJUNIOR/5')]
+      [
+        Markup.button.url(
+          '📲 Ouvrir le bot',
+          'https://t.me/gamesripte_bot'
+        )
+      ],
+      [
+        Markup.button.url(
+          '🎥 Comment creer un compte Pro authentique',
+          'https://t.me/RAFAFSJUNIOR/5'
+        )
+      ]
     ])
   );
 
@@ -35,5 +46,4 @@ voici les 3 etatpe pour activer le scripte
 });
 
 bot.launch();
-
 console.log('Bot en ligne...');
